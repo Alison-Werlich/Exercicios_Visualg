@@ -1,0 +1,35 @@
+algoritmo "semnome"
+var
+
+CONT, N, SOMA, DIVI5, NULL, SOMA_PAR: INTEIRO
+
+inicio
+
+SOMA <- 0
+DIVI5 <- 0
+NULL <- 0
+SOMA_PAR <- 0
+
+PARA CONT <- 1 ATE 5 FACA
+     ESCREVA ("DIGITE O ", CONT, "o. VALOR: ")
+     LEIA (N)
+     SOMA <- SOMA + N
+     SE (N%5 = 0) ENTAO
+        DIVI5 <- DIVI5 +1
+     FIMSE
+     SE (N < 1) ENTAO
+        NULL <- NULL +1
+     FIMSE
+     SE (N%2 = 0) ENTAO
+        SOMA_PAR <- SOMA_PAR + N
+     FIMSE
+FIMPARA
+
+ESCREVAL ("A SOMA ENTRE OS VALORES E : ", SOMA)
+ESCREVAL ("A MEDIA ENTRE OS VALORES E : ", (SOMA/CONT))
+ESCREVAL ("VALORES DIVISIVEIS POR 5 : ",  DIVI5)
+ESCREVAL ("VALORES NULOS : ", NULL)
+ESCREVAL ("A SOMA DOS VALORES PARES E : ", SOMA_PAR)
+     
+
+fimalgoritmo
